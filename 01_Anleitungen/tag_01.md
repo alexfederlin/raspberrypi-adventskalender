@@ -1,48 +1,40 @@
-📅 Tag 1: Start & Pi-Vorbereitung 🚀
-🎁 Inhalt des Türchens
-Micro-SD-Karte (mit vorinstalliertem Raspberry Pi OS)
+# 01_Anleitungen/Tag_01_Pi_Start.md
 
-🎯 Das Ziel des Tages
-Heute startest du das Projekt, indem du den Raspberry Pi zum ersten Mal mit der richtigen Software in Betrieb nimmst. Am Ende des Tages bootet der Pi und ist bereit für die ersten Programmierschritte.
+## 📅 Tag 1: Start & Pi-Vorbereitung 🚀
 
-💡 Schritte (ca. 20 Minuten)
-Vorbereitung des Arbeitsplatzes:
+### 🎁 Inhalt des Türchens
 
-Stelle deinen Raspberry Pi, einen Monitor (mit HDMI-Kabel), eine Tastatur und eine Maus bereit.
+* **Micro-SD-Karte (mit vorinstalliertem Raspberry Pi OS)**
 
-Halte das Netzteil für den Pi griffbereit.
+### 🎯 Das Ziel des Tages
 
-SD-Karte einlegen:
+Heute startest du das Projekt, indem du den **Raspberry Pi** zum ersten Mal mit der richtigen Software in Betrieb nimmst. Am Ende des Tages bootet der Pi und ist bereit für die ersten Programmierschritte.
 
-Nimm die Micro-SD-Karte aus dem heutigen Türchen.
+### 💡 Schritte (ca. 20 Minuten)
 
-Stecke die Karte vorsichtig in den SD-Karten-Slot deines Raspberry Pi.
+1.  **Vorbereitung des Arbeitsplatzes:**
+    * Stelle deinen Raspberry Pi, einen Monitor (mit HDMI-Kabel), eine Tastatur und eine Maus bereit.
+    * Halte das Netzteil für den Pi griffbereit.
+2.  **SD-Karte einlegen:**
+    * Nimm die Micro-SD-Karte aus dem heutigen Türchen.
+    * Stecke die Karte vorsichtig in den **SD-Karten-Slot** deines Raspberry Pi.
+3.  **Hardware anschließen:**
+    * Schließe Tastatur und Maus an die **USB-Anschlüsse** des Pi an.
+    * Verbinde den Pi über das HDMI-Kabel mit deinem Monitor.
+    * **Wichtig:** Das Netzteil wird immer als Letztes angeschlossen!
+4.  **Erster Start (Booten):**
+    * Schließe das Netzteil an den Pi an. Die kleine rote LED sollte aufleuchten.
+    * Der Pi startet nun das Betriebssystem (OS) von der SD-Karte. Das kann ein paar Minuten dauern.
+    * Du solltest auf dem Monitor den **Desktop** des Raspberry Pi OS sehen.
+5.  **Grundkonfiguration:**
+    * Folge den Anweisungen auf dem Bildschirm, um die ersten Einstellungen vorzunehmen (z. B. Land, Sprache und Zeitzone).
+    * Verbinde den Pi mit deinem **WLAN-Netzwerk**.
+    * **Optional:** Ändere das Standardpasswort.
 
-Hardware anschließen:
+### ✅ Erfolgsprüfung
 
-Schließe Tastatur und Maus an die USB-Anschlüsse des Pi an.
-
-Verbinde den Pi über das HDMI-Kabel mit deinem Monitor.
-
-Wichtig: Das Netzteil wird immer als Letztes angeschlossen!
-
-Erster Start (Booten):
-
-Schließe das Netzteil an den Pi an. Die kleine rote LED sollte aufleuchten.
-
-Der Pi startet nun das Betriebssystem (OS) von der SD-Karte. Das kann ein paar Minuten dauern.
-
-Du solltest auf dem Monitor den Desktop des Raspberry Pi OS sehen (ähnlich wie bei einem normalen Computer).
-
-Grundkonfiguration:
-
-Folge den Anweisungen auf dem Bildschirm, um die ersten Einstellungen vorzunehmen (z. B. Land, Sprache und Zeitzone).
-
-Verbinde den Pi mit deinem WLAN-Netzwerk.
-
-Optional: Ändere das Standardpasswort.
-
-✅ Erfolgsprüfung
 Dein Raspberry Pi ist hochgefahren, mit dem Internet verbunden und zeigt den Desktop an. Du bist bereit für das erste Programmier-Türchen!
 
-Morgen am Tag 2 werden wir den USB-Stick mit den ersten Code-Vorlagen nutzen, um dein erstes Programm zu starten!
+---
+
+**Morgen am Tag 2** werden wir den **USB-Stick** mit den ersten Code-Vorlagen nutzen, um dein erstes Programm zu starten!
