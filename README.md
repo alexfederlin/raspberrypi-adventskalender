@@ -50,7 +50,7 @@ Die täglichen Aufgaben sind so konzipiert, dass sie **jeweils ca. 20–30 Minut
 | Tag | Phase | Thema/Ziel | Inhalt des Türchens (Hardware/Code) | Lernschwerpunkt |
 | :--- | :--- | :--- | :--- | :--- |
 | **1** | **I** | **Start & Pi-Vorbereitung** 🚀 | Micro-SD-Karte (mit vorinstalliertem OS) | System-Setup, WLAN-Verbindung |
-| **2** | **I** | **Erster Programmcode** 💻 | USB-Stick mit Code-Vorlagen & Installations-Skript | Python-Grundlagen, Code ausführen |
+| **2** | **I** | **Erster Programmcode** 💻 | Git Repo mit Code-Vorlagen clonen | Python-Grundlagen, Code ausführen |
 | **3** | **I** | **Breadboard-Grundlagen** 📌 | Breadboard und 5 Jumper-Kabel (M/F) | GPIO-Pins, Schaltkreis-Grundlagen |
 | **4** | **I** | **Erste LED schalten** 🔴 | Rote LED und 220 Ohm Widerstand | Digitaler Ausgang, Stromkreis schließen |
 | **5** | **I** | **LED blinken lassen** ✨ | Anleitung zum Code-Update (`time.sleep()`) | Programmablaufsteuerung, Timing |

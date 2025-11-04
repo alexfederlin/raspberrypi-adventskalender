@@ -1,5 +1,3 @@
-# 01_Anleitungen/Tag_01_Pi_Start.md
-
 ## 📅 Tag 1: Start & Pi-Vorbereitung 🚀
 
 ### 🎁 Inhalt des Türchens
@@ -37,4 +35,4 @@ Dein Raspberry Pi ist hochgefahren, mit dem Internet verbunden und zeigt den Des
 
 ---
 
-**Morgen am Tag 2** werden wir den **USB-Stick** mit den ersten Code-Vorlagen nutzen, um dein erstes Programm zu starten!
+**Morgen am Tag 2** werden wir den die ersten Code-Vorlagen nutzen, um dein erstes Programm zu starten!
