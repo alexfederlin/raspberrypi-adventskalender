@@ -59,7 +59,7 @@ Die täglichen Aufgaben sind so konzipiert, dass sie **jeweils ca. 20–30 Minut
 | **7** | **II** | **Temperatursensor I** 🌡️ | Temperatur-/Feuchtesensor **DHT11/BME280** und Kabel | Datenblatt lesen, serielle Kommunikation |
 | **8** | **II** | **Sensor-Code integrieren** | Code-Snippets zum Auslesen des Sensors | Externe Bibliotheken verwenden |
 | **9** | **II** | **Umgebungslicht-Sensor** 💡 | Fotowiderstand (LDR) + 10 kOhm Widerstand | Analoge Werte digital messen (Spannungsteiler) |
-| **10** | **II** | **Test-Zusammenbau** 🔩 | Erste M3-Schrauben/Abstandshalter, kleine Steckbrett-Halterung | Ordnung auf dem Breadboard, Prototyping |
+| **10** | **II** | **Anzeigemodi umschalten** 🔩 | Taster bestimmt welcher Sensorwert angezeigt wird | Funktionen steuern |
 | **11** | **II** | **Ein Summer für Alarme** 📢 | Aktiver Piezosummer und Jumper-Kabel | Akustischer Ausgang, Feedback-Systeme |
 | **12** | **II** | **Schwellenwerte prog.** | Code-Update: Summer bei Grenzwert aktivieren (z.B. >25°C) | Logik-Verzweigungen (`if/else`), Automatisierung |
 | --- | --- | --- | --- | --- |
@@ -76,3 +76,6 @@ Die täglichen Aufgaben sind so konzipiert, dass sie **jeweils ca. 20–30 Minut
 | **22** | **IV** | **Nachrichten-Ticker** 📰 | Code-Snippets für **RSS-Parsing** | Datenstrukturierung (XML/RSS), Text-Scrolling |
 | **23** | **IV** | **Finale Gehäuse-Montage** 🛠️ | Der **3D-gedruckte Gehäuse-Deckel** + restliche Schrauben | Endgültiger Zusammenbau, Kabelmanagement |
 | **24** | **IV** | **Das fertige Produkt!** 🎉 | End-Anleitung zur **Startautomatik** | Systemkonfiguration, Produktiv-Einsatz |
+
+Display ideen
+https://www.printables.com/model/588251-091-oled-display-stand

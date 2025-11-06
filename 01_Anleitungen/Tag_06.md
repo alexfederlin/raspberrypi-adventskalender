@@ -22,10 +22,6 @@ Was passiert mit dem GPIO-Pin, wenn der Taster *nicht* gedrückt ist? Er "schweb
 Damit der Pin immer weiß, was los ist, geben wir ihm einen **Pull-Down-Widerstand**. Dieser Widerstand zieht den Pin sanft auf **GND (LOW)**, wenn der Taster offen ist. Wenn du den Taster drückst, "gewinnt" der starke Strom von den 3.3V und der Pin wird **HIGH**.
 
 
-
-[Image of breadboard pull-down resistor circuit diagram]
-
-
 ### 🔌 Schritte (Hardware)
 
 **WICHTIG: Pi herunterfahren und Stromkabel ziehen!** Die Schaltung von Tag 4/5 (LED an GPIO 17) bleibt bestehen.
@@ -47,7 +43,9 @@ Damit der Pin immer weiß, was los ist, geben wir ihm einen **Pull-Down-Widersta
     * Dein Aufbau sollte jetzt so aussehen:
         * **LED-Kreis:** GPIO 17 -> Widerstand -> LED -> GND (von Tag 4)
         * **Taster-Kreis:** 3.3V -> Taster -> (ein Kabel zu GPIO 18) UND (ein 10k Widerstand zu GND)
-    * 
+
+![](Tag_06_Schaltung.png)
+
 
 ### 💻 Schritte (Software)
 

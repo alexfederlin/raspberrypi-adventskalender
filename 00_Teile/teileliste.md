@@ -1,20 +1,23 @@
-## 🛠️ Teileliste: Raspberry Pi Wetter- und Nachrichtenstation (Adventskalender-Projekt)
+## 🛠️ Vollständige Hardware-Liste für die Wetter- und Nachrichtenstation
 
-Dieses Projekt verwendet hauptsächlich Plug-and-Play-Komponenten. Ein Raspberry Pi (Modell 3 oder 4) ist vorausgesetzt.
+Diese Liste enthält **alle** physischen Komponenten, die benötigt werden, um das Projekt bis Tag 24 abzuschließen.
 
 | Komponente | Menge | Typ / Spezifikation | Türchen-Tag |
-| :--- | :--- | :--- | :--- |
-| **Zentraleinheit** | 1 | Raspberry Pi 3/4/5 (vorhanden) | (Start) |
-| **Speicher** | 1 | Micro-SD-Karte (mind. 16 GB, Klasse 10) | Tag 1 |
-| **Code-Übertragung** | 1 | Notiz mit Link/Token | Tag 2 |
-| **Steckplatine** | 1 | Breadboard (mind. 400 Pins) | Tag 3 |
-| **Jumper-Kabel** | 1 Set | M/F und M/M Kabel (insgesamt ca. 40 Stück) | Tag 3, 4, 7, 13 |
-| **Anzeige (Display)** | 1 | **OLED Display** (SSD1306, 128x64 Pixel, I2C-Anschluss) | Tag 13 |
-| **Temperatur & Feuchte** | 1 | **DHT11** oder **BME280** Sensor-Modul (I2C-fähig ist einfacher) | Tag 7 |
-| **Licht-Sensor** | 1 | Fotowiderstand (LDR) + 10 kOhm Widerstand | Tag 9 |
-| **Akustischer Ausgang** | 1 | Aktiver Piezosummer (mit eingebautem Oszillator) | Tag 11 |
-| **Visueller Ausgang** | 1 | Rote 5mm LED + 220 Ohm Widerstand | Tag 4 |
-| **Eingabe** | 1 | Taster (4-Pin) + 10 kOhm Widerstand | Tag 6 |
-| **Gehäuse-Material** | 1 Rolle | Spezielles Filament (z.B. Leucht-PLA, Metallic-PLA) | Tag 19 |
-| **Montage** | 1 Set | M2.5 oder M3 Schrauben und Abstandshalter für Pi und Gehäuse | Tag 10, 23 |
-| **API-Key Gutschein** | 1 | Ausdruck eines Gutscheins für einen kostenlosen Wetter-API-Key (z.B. OpenWeatherMap Free Tier) | Tag 21 |
+| :--- | :--- | :--- | :---: |
+| Raspberry Pi | 1 | Modell 3/4/5 (wird vorausgesetzt) | **(Start)** |
+| Micro-SD-Karte | 1 | Mind. 16 GB, mit vorinstalliertem OS | **1** |
+| **Breadboard** | 1 | Steckplatine (z.B. 400 Pins) | **3** |
+| Jumper-Kabel | 1 Set | M/F, verschiedene Farben/Längen | **3** |
+| **LED** | 1 | 5mm Leuchtdiode (z.B. Rot) | **4** |
+| Widerstand (LED) | 1 | ca. **220 Ohm** (Strombegrenzung) | **4** |
+| **Taster** | 1 | 4-poliger Druckknopf | **6** |
+| Widerstand (Pull-Down) | 1 | **10 kOhm** (Pull-Down-Widerstand) | **6** |
+| **Temperatur/Feuchte-Sensor** | 1 | **DHT11** oder **BME280** Sensor-Modul | **7** |
+| **Licht-Sensor** | 1 | **Fotowiderstand (LDR)** | **9** |
+| Widerstand (LDR) | 1 | **10 kOhm** (für den LDR-Spannungsteiler) | **9** |
+| Montagezubehör | 1 Set | M3 Schrauben und Abstandshalter | **10** |
+| **Piezosummer** | 1 | Aktiver Summer (mit eingebautem Oszillator) | **11** |
+| **Display** | 1 | **OLED/LCD Display** (128x64 Pixel, I2C) | **13** |
+| Verbrauchsmaterial | 1 Rolle | Spezielles Filament (z.B. Leucht-PLA für 3D-Druck) | **19** |
+| **API-Key Gutschein** | 1 | Gutschein/Code für kostenlosen Wetter-API-Key | **21** |
+| 3D-Druck Teile | 3 Stk. | Gehäuse-Boden, Front, Deckel (als STL-Dateien) | **17, 18, 23** |
