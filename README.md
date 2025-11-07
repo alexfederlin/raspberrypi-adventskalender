@@ -61,12 +61,12 @@ Die täglichen Aufgaben sind so konzipiert, dass sie **jeweils ca. 20–30 Minut
 | **9** | **II** | **Umgebungslicht-Sensor** 💡 | Fotowiderstand (LDR) + 10 kOhm Widerstand | Analoge Werte digital messen (Spannungsteiler) |
 | **10** | **II** | **Anzeigemodi umschalten** 🔩 | Taster bestimmt welcher Sensorwert angezeigt wird | Funktionen steuern |
 | **11** | **II** | **Ein Summer für Alarme** 📢 | Aktiver Piezosummer und Jumper-Kabel | Akustischer Ausgang, Feedback-Systeme |
-| **12** | **II** | **Schwellenwerte prog.** | Code-Update: Summer bei Grenzwert aktivieren (z.B. >25°C) | Logik-Verzweigungen (`if/else`), Automatisierung |
+| **12** | **II** | **Dashboard** | Code-Update: Alle Sensorwerte abfragen und zwischen Anzeigen umschalten | Kombination aller Sensoren |
 | --- | --- | --- | --- | --- |
-| **13** | **III** | **Anzeigegerät** 📺 | Kleines **OLED/LCD Display** (128x64, I2C) | Neue Hardware-Schnittstelle I2C |
-| **14** | **III** | **Display anschließen** | Jumper-Kabel für I2C (SDA/SCL) | I2C-Verkabelung, Bus-Systeme |
-| **15** | **III** | **Display-Code I (Test)** | Code-Snippets zum Initialisieren des Displays (Text-Ausgabe) | Display-Bibliotheken, Textrendering |
-| **16** | **III** | **Display-Code II (Werte)** | Code-Update: Sensorwerte auf dem Display anzeigen | Variablen-Management, Datenformatierung |
+| **13** | **III** | **Display anschließen** 📺 | Kleines **OLED/LCD Display** (128x64, I2C) anschlißen und "Hello World"| Neue Hardware-Schnittstelle I2C |
+| **14** | **III** | **Display-Code I (Werte)** | Code-Update: Sensorwerte auf dem Display anzeigen | Variablen-Management, Datenformatierung |
+| **15** | **III** | **Display-Code II (Dashboard)** | Code-Update: Sensorwerte auf dem Display anzeigen und umschalten |  |
+| **16** | **III** | **Alarm System** |  |
 | **17** | **III** | **Gehäuse-Teil I** 📦 | Der **3D-gedruckte Boden** des Gehäuses | Funktionale Gehäuse-Elemente |
 | **18** | **III** | **Gehäuse-Teil II** 🖼️ | Die **3D-gedruckte Display-Fassung/Frontplatte** | Modulares Bauen, Hardware-Integration |
 | --- | --- | --- | --- | --- |
