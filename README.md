@@ -67,12 +67,13 @@ Die täglichen Aufgaben sind so konzipiert, dass sie **jeweils ca. 20–30 Minut
 | **14** | **III** | **Display-Code I (Werte)** | Code-Update: Sensorwerte auf dem Display anzeigen | Variablen-Management, Datenformatierung |
 | **15** | **III** | **Display-Code II (Dashboard)** | Code-Update: Sensorwerte auf dem Display anzeigen und umschalten |  |
 | **16** | **III** | **Alarm System** |  |
+| **16** | **IV** | **Internet-Daten I (Uhrzeit)** 🌐 | Anleitung zur **API-Bibliothek** (`requests`) | Netzwerkprogrammierung, HTTP-Anfragen |
+| **18** | **IV** | **Internet-Daten II (Wetter)** 🌤️ | Open-Meteo  | JSON-Daten parsen, externe Daten nutzen |
 | **17** | **III** | **Gehäuse-Teil I** 📦 | Der **3D-gedruckte Boden** des Gehäuses | Funktionale Gehäuse-Elemente |
 | **18** | **III** | **Gehäuse-Teil II** 🖼️ | Die **3D-gedruckte Display-Fassung/Frontplatte** | Modulares Bauen, Hardware-Integration |
 | --- | --- | --- | --- | --- |
 | **19** | **IV** | **3D-Druck Projekt-Tag** 🌈 | **Neue Rolle Filament** (z.B. Leucht-PLA) | Design-Ideen, Slicing-Software (optional) |
-| **20** | **IV** | **Internet-Daten I** 🌐 | Anleitung zur **API-Bibliothek** (`requests`) | Netzwerkprogrammierung, HTTP-Anfragen |
-| **21** | **IV** | **Internet-Daten II (Wetter)** 🌤️ | **API-Key-Gutschein** (OpenWeatherMap) | JSON-Daten parsen, externe Daten nutzen |
+
 | **22** | **IV** | **Nachrichten-Ticker** 📰 | Code-Snippets für **RSS-Parsing** | Datenstrukturierung (XML/RSS), Text-Scrolling |
 | **23** | **IV** | **Finale Gehäuse-Montage** 🛠️ | Der **3D-gedruckte Gehäuse-Deckel** + restliche Schrauben | Endgültiger Zusammenbau, Kabelmanagement |
 | **24** | **IV** | **Das fertige Produkt!** 🎉 | End-Anleitung zur **Startautomatik** | Systemkonfiguration, Produktiv-Einsatz |
