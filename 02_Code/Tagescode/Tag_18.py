@@ -9,7 +9,7 @@ LONGITUDE = 8.68 # Längengrad (Osten/Westen)
 # Die Basis-URL der Open-Meteo API. 
 # Wir fragen nach der stündlichen Temperatur und dem Wettercode (WMO code)
 URL = (
-    f"[https://api.open-meteo.com/v1/forecast](https://api.open-meteo.com/v1/forecast)?"
+    f"https://api.open-meteo.com/v1/forecast?"
     f"latitude={LATITUDE}&longitude={LONGITUDE}&"
     f"hourly=temperature_2m,weather_code&" # Diese Werte wollen wir
     f"timezone=Europe%2FBerlin" # Wichtig für die korrekte Uhrzeit
