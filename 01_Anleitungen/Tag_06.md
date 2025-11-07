@@ -44,7 +44,7 @@ Damit der Pin immer weiß, was los ist, geben wir ihm einen **Pull-Down-Widersta
         * **LED-Kreis:** GPIO 17 -> Widerstand -> LED -> GND (von Tag 4)
         * **Taster-Kreis:** 3.3V -> Taster -> (ein Kabel zu GPIO 18) UND (ein 10k Widerstand zu GND)
 
-![](Tag_06_Schaltung.png)
+![](./Bilder/Tag_06_Schaltung.png)
 
 
 ### 💻 Schritte (Software)
@@ -52,40 +52,6 @@ Damit der Pin immer weiß, was los ist, geben wir ihm einen **Pull-Down-Widersta
 1.  **Pi starten** und **Thonny IDE** öffnen.
 2.  **Datei öffnen:** `Desktop/Adventskalender_Pi_Tage/Tag_06/Tag_06.py`.
 3.  **Code ansehen:** Schau dir den neuen Code an. Wir kombinieren Tag 4 und Tag 6!
-    ```python
-    import RPi.GPIO as GPIO
-    import time
-    
-    # Unsere Pins definieren
-    LED_PIN = 17    # Der Pin für die LED (Output)
-    BUTTON_PIN = 18 # Der Pin für den Taster (Input)
-    
-    GPIO.setmode(GPIO.BCM) 
-    
-    # Pins einrichten
-    GPIO.setup(LED_PIN, GPIO.OUT) 
-    # NEU: Pin als EINGANG (IN) definieren
-    GPIO.setup(BUTTON_PIN, GPIO.IN) 
-    
-    print("Drücke den Taster, um die LED zu steuern. STRG+C zum Stoppen.")
-    
-    try:
-        while True:
-            # NEU: Den Status des Tasters lesen
-            if GPIO.input(BUTTON_PIN) == GPIO.HIGH:
-                # Taster ist gedrückt
-                print("Taster gedrückt! LED AN.")
-                GPIO.output(LED_PIN, GPIO.HIGH)
-            else:
-                # Taster ist NICHT gedrückt
-                GPIO.output(LED_PIN, GPIO.LOW)
-            
-            time.sleep(0.01) # Eine klitzekleine Pause
-            
-    except KeyboardInterrupt:
-        print("Programm gestoppt. Räume Pins auf.")
-        GPIO.cleanup()
-    ```
 4.  **Code ausführen:** Klicke auf den **grünen Play-Button**.
 5.  **Ausprobieren:** Drücke den Taster! Die LED sollte jetzt **nur leuchten, solange du den Taster gedrückt hältst.**
 6.  **Stoppen:** Klicke in die Shell (unten) und drücke **STRG + C**.

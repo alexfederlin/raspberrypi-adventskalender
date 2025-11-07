@@ -41,7 +41,14 @@ Der **Widerstand** ist wie eine Bremse für den Strom. Wir bauen ihn vor die LED
     * Dein Stromkreis sollte jetzt so fließen:
         Pi (GPIO 17) -> Jumper-Kabel -> Reihe 10 -> Widerstand -> Reihe 12 -> LED (langes Bein) -> LED (kurzes Bein) -> Blaue GND-Schiene -> Pi (GND-Pin)
     * So sieht der Aufbau aus:
-        
+
+<img src="./Bilder/Tag_04_Aufbau.jpg" width=20% height=20%>
+
+
+### Raspi GPIO Belegung
+![Raspberry Pi GPIO pinout Diagram](https://indibit.de/wp-content/uploads/2015/08/Raspberry-Pi-2-Model-B-GPIO-Belegung-789x1024.png)
+
+
 
 ### 💻 Schritte (Software)
 
@@ -52,30 +59,6 @@ Der **Widerstand** ist wie eine Bremse für den Strom. Wir bauen ihn vor die LED
     * Navigiere zu `Desktop/Adventskalender_Pi_Tage/Tag_04/`.
     * Öffne die Datei **`Tag_04.py`**.
 4.  **Code ansehen:** Du siehst jetzt deinen ersten echten Steuer-Code!
-    ```python
-    import RPi.GPIO as GPIO
-    import time
-    
-    # Den Pin festlegen (nach GPIO-Nummer)
-    LED_PIN = 17 
-    
-    # GPIO-Modus setzen
-    GPIO.setmode(GPIO.BCM) 
-    # Den LED-Pin als AUSGANG (OUT) definieren
-    GPIO.setup(LED_PIN, GPIO.OUT) 
-    
-    print("LED wird eingeschaltet...")
-    # Den Pin auf HIGH (Strom AN) setzen
-    GPIO.output(LED_PIN, GPIO.HIGH) 
-    
-    # Wir warten 10 Sekunden, damit du sie leuchten siehst
-    time.sleep(10) 
-    
-    print("Programm beendet. LED bleibt an.")
-    # Am Ende räumen wir die Pins auf (wichtig!)
-    GPIO.cleanup() 
-    print("Pins aufgeräumt. LED geht aus.")
-    ```
 5.  **Code ausführen:**
     * Klicke auf den **grünen Play-Button**.
 
@@ -93,7 +76,3 @@ Versuche: Ändere sie auf time.sleep(1) (nur eine Sekunde) oder time.sleep(30) (
 Challenge: Was passiert, wenn du die Zeile GPIO.cleanup() mit einem # am Anfang auskommentierst (z.B. # GPIO.cleanup())? Bleibt die LED nach dem Programmende an? (Probiere es aus!)
 
 Frage: Was passiert, wenn du GPIO.HIGH zu GPIO.LOW änderst? Leuchtet die LED überhaupt?
-
----
-
-**Morgen (Tag 5):** Wir bringen die LED zum Blinken!

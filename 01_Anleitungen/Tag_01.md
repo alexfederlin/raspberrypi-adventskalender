@@ -32,7 +32,3 @@ Heute startest du das Projekt, indem du den **Raspberry Pi** zum ersten Mal mit 
 ### ✅ Erfolgsprüfung
 
 Dein Raspberry Pi ist hochgefahren, mit dem Internet verbunden und zeigt den Desktop an. Du bist bereit für das erste Programmier-Türchen!
-
----
-
-**Morgen am Tag 2** werden wir den die ersten Code-Vorlagen nutzen, um dein erstes Programm zu starten!

@@ -25,17 +25,13 @@ Mit Git können wir unseren Code speichern und verwalten. Wir werden heute das "
     cd Desktop
     ```
 3.  **Das Projekt klonen:**
-    * Jetzt kommt der Magie-Befehl! Benutze `git clone` und den Link von deiner Notiz.
+    * Jetzt kommt der Magie-Befehl! Benutze `gh repo clone` und den Link von deiner Notiz.
     * **WICHTIG:** Ersetze `[HIER_DEIN_LINK_EINFUEGEN]` mit dem echten Link von deinem Zettel!
     ```bash
-    git clone [HIER_DEIN_LINK_EINFUEGEN]
+    gh repo clone [HIER_DEIN_LINK_EINFUEGEN]
     ```
     * Drücke `Enter`.
-4.  **Anmelden:**
-    * Das Terminal fragt dich jetzt nach deinem **Benutzernamen (Username)**. Tippe den Namen von deiner Notiz ein und drücke `Enter`.
-    * Danach fragt es nach dem **Passwort (oder Token)**. Tippe es ein und drücke `Enter`.
-    * **Keine Sorge:** Wenn du das Passwort tippst, siehst du **keine Sternchen**! Das ist eine Sicherheitsfunktion im Terminal. Einfach blind tippen und `Enter` drücken.
-5.  **Erfolg prüfen:**
+4.  **Erfolg prüfen:**
     * Wenn alles geklappt hat, siehst du auf deinem Desktop einen **neuen Ordner**! Er heißt (wahrscheinlich) `Adventskalender_Pi_Tage`.
     * Du kannst das Terminal jetzt schließen.
 
@@ -47,7 +43,7 @@ Jetzt überprüfen wir, ob der erste Code da ist.
     * Klicke auf die **Himbeere** (Menü) oben links.
     * Gehe zu **"Programmierung"** und wähle **"Thonny Python IDE"**.
 2.  **Datei öffnen:**
-    * Gehe in Thonny auf **"Datei"** (File) -> **"Öffnen..."** (Open...).
+    * Gehe in Thonny auf **"Datei"** (File) -> **"Laden..."** (Load...).
     * Ein Dateimanager öffnet sich. Klicke auf **"Desktop"**.
     * Öffne den neuen Ordner **`Adventskalender_Pi_Tage`**.
     * Öffne den Ordner **`Tag_02`**.
@@ -59,7 +55,3 @@ Jetzt überprüfen wir, ob der erste Code da ist.
 4.  **Erfolg!**
     * Im unteren Fenster (der "Shell") sollte jetzt die Nachricht erscheinen: "Git Klonen erfolgreich! Willkommen beim Projekt!" (oder eine ähnliche Nachricht).
     * **Du hast Tag 2 gemeistert!**
-
----
-
-**Morgen (Tag 3):** Öffne dein Türchen und hole die Hardware raus. Bevor du Thonny startest, musst du im **Terminal** (im Ordner `Adventskalender_Pi_Tage`) `git pull` eingeben, um die neue Anleitung zu laden!

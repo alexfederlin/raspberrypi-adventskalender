@@ -36,7 +36,7 @@ Dein Raspberry Pi hat an der Seite eine lange Reihe von "Stacheln". Das sind die
 
 
 
-[Image of Raspberry Pi GPIO pinout diagram]
+![Raspberry Pi GPIO pinout Diagram](https://indibit.de/wp-content/uploads/2015/08/Raspberry-Pi-2-Model-B-GPIO-Belegung-789x1024.png)
 
 
 ### 🔌 Schritte (ca. 15 Minuten)
@@ -63,7 +63,3 @@ Heute bauen wir noch keinen echten Stromkreis, aber wir bereiten das Breadboard 
 ### 💻 Code-Test
 
 Für heute gibt es keinen Code. Das heutige Ziel war es, dein "Elektronik-Lego-Brett" vorzubereiten.
-
----
-
-**Morgen (Tag 4):** Wir bringen das erste Bauteil zum Leuchten!
