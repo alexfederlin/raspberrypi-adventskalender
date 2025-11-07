@@ -25,7 +25,7 @@ Diese Schritte müssen einmalig durchgeführt werden, um den Raspberry Pi vorzub
 | :--- | :--- | :--- |
 | **1. Pi OS installieren** | **Raspberry Pi OS** (mit Desktop) auf die SD-Karte spielen. | [ ] |
 | **2. Grund-Setup & Updates** | Pi einmal hochfahren, WLAN konfigurieren, Sprache/Tastatur einstellen und alle Updates durchführen: `sudo apt update && sudo apt upgrade`. | [ ] |
-| **3. Software installieren** | Sicherstellen, dass **`gh`** (`sudo apt install gh`) und die **`Thonny IDE`** (meist vorinstalliert) vorhanden sind. | [ ] |
+| **3. Software installieren** | Sicherstellen, dass dependencies installiert sind (`sudo apt install gh python3-feedparser`) und die **`Thonny IDE`** (meist vorinstalliert) vorhanden sind. | [ ] |
 | **4. gh config** | Um das git repo zu clonen, muss ein API Key in der env Variable GH_TOKEN exportiert werden (e.g. in `~/.bashrc` setzen)| [ ] |
 | **4. Tag 1 Türchen** | Pi herunterfahren, SD-Karte entnehmen und in das Türchen für **Tag 1** legen. | [ ] |
 | **5. Hardware verpacken** | Alle 23 weiteren Hardware-Komponenten (gemäß `00_Teileliste.md`) in die vorbereiteten Schachteln (`04_Verpackung_Printables/`) verpacken. | [ ] |

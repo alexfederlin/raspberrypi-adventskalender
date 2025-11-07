@@ -26,17 +26,7 @@ Am Ende zeigt dein Programm die **fünf neuesten Schlagzeilen** im Terminal an (
 
 ### 💻 Schritte (Software)
 
-#### Teil A: Den "Nachrichten-Leser" (feedparser) installieren
-
-Um RSS-Feeds zu lesen, brauchen wir ein spezielles Werkzeug, die `feedparser`-Bibliothek.
-
-1.  **Terminal öffnen.**
-2.  Installiere die Bibliothek mit `pip`:
-    ```bash
-    sudo pip3 install feedparser
-    ```
-
-#### Teil B: Die Schlagzeilen abrufen
+#### Die Schlagzeilen abrufen
 
 Wir nutzen heute den RSS-Feed der **BBC News Top Stories** (oder einen anderen Feed deiner Wahl, wenn dieser nicht funktioniert, aber dieser ist sehr stabil).
 

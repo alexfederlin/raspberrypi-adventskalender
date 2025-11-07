@@ -3,10 +3,10 @@ import time
 
 # Die URL des RSS-Feeds, den wir abfragen wollen
 # Hier: BBC News Top Stories (sehr zuverlässig)
-RSS_URL = "http://feeds.bbci.co.uk/news/rss.xml"
+#RSS_URL = "http://feeds.bbci.co.uk/news/rss.xml"
 
 # Alternative deutsche Quelle (oft stabil):
-# RSS_URL = "https://www.tagesschau.de/xml/rss2/"
+RSS_URL = "https://www.tagesschau.de/xml/rss2/"
 
 print(f"Verbinde mit Nachrichten-Feed: {RSS_URL}")
 
@@ -36,7 +36,7 @@ try:
             print(f"[{i+1}] {titel}")
             
         # Bonus: Zeige das Datum der letzten Aktualisierung
-        print(f"\nLetzte Aktualisierung: {feed.feed.published}")
+        #print(f"\nLetzte Aktualisierung: {feed.feed.published}")
 
 
 except Exception as e:
