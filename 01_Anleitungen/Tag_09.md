@@ -30,9 +30,9 @@ Die Zeit, die es dauert, einen Pin von **HIGH** auf **LOW** zu schalten und dann
 **WICHTIG: Pi herunterfahren und Stromkabel ziehen!** Die Schaltung von Tag 7/8 (BME280) bleibt bestehen.
 
 1.  **LDR platzieren:**
-    * Stecke die beiden Beinchen des **Fotowiderstands (LDR)** in zwei unterschiedliche, freie Reihen deines Breadboards (z.B. Reihe 20 und 22). Der LDR hat keine Polarität, es ist egal, wie herum er steckt.
+    * Stecke die beiden Beinchen des **Fotowiderstands (LDR)** in zwei unterschiedliche, freie Reihen deines Breadboards (z.B. Reihe 17 und 20). Der LDR hat keine Polarität, es ist egal, wie herum er steckt.
 2.  **Verbindung zur Masse (GND):**
-    * Verbinde das Beinchen des LDR in **Reihe 22** mit der **Blauen (GND / Minus) Schiene** deines Breadboards.
+    * Verbinde das Beinchen des LDR in **Reihe 17** mit der **Blauen (GND / Minus) Schiene** deines Breadboards.
 3.  **Spannungsteiler bauen:**
     * Nimm den **10 kOhm Widerstand**.
     * Stecke ein Ende in dieselbe Reihe wie das LDR-Beinchen in **Reihe 20**.

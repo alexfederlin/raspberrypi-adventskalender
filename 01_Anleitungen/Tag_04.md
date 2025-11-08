@@ -42,7 +42,7 @@ Der **Widerstand** ist wie eine Bremse für den Strom. Wir bauen ihn vor die LED
         Pi (GPIO 17) -> Jumper-Kabel -> Reihe 10 -> Widerstand -> Reihe 12 -> LED (langes Bein) -> LED (kurzes Bein) -> Blaue GND-Schiene -> Pi (GND-Pin)
     * So sieht der Aufbau aus:
 
-<img src="./Bilder/Tag_04_Aufbau.jpg" width=20% height=20%>
+<img src="./Bilder/Tag_04.png" width=60% height=60%>
 
 
 ### Raspi GPIO Belegung
