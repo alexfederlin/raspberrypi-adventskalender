@@ -11,7 +11,8 @@ Toll, dein Pi misst schon Temperatur, Feuchtigkeit und Druck. Jetzt bringen wir 
 ### 🎁 Inhalt des Türchens
 
 * Ein **Fotowiderstand** (LDR, Light Dependent Resistor)
-* Ein **10 kOhm Widerstand** (Braun-Schwarz-Orange)
+* **1 x 47 kOhm Widerstand** (Farben: Gelb-Violett-Orange)
+* **1 x 0.47 µF Kondensator**
 
 ### 🎯 Das Ziel des Tages
 
@@ -31,20 +32,17 @@ Die Zeit, die es dauert, einen Pin von **HIGH** auf **LOW** zu schalten und dann
 
 1.  **LDR platzieren:**
     * Stecke die beiden Beinchen des **Fotowiderstands (LDR)** in zwei unterschiedliche, freie Reihen deines Breadboards (z.B. Reihe 17 und 20). Der LDR hat keine Polarität, es ist egal, wie herum er steckt.
-2.  **Verbindung zur Masse (GND):**
-    * Verbinde das Beinchen des LDR in **Reihe 17** mit der **Blauen (GND / Minus) Schiene** deines Breadboards.
-3.  **Spannungsteiler bauen:**
-    * Nimm den **10 kOhm Widerstand**.
-    * Stecke ein Ende in dieselbe Reihe wie das LDR-Beinchen in **Reihe 20**.
-    * Stecke das andere Ende in eine freie Reihe (z.B. Reihe 24).
-4.  **Verbindung zur Spannung (3.3V):**
-    * Verbinde die Reihe **24** (wo das zweite Widerstands-Ende steckt) mit der **Roten (3.3V / Plus) Schiene**.
-5.  **Daten-Pin (Messung):**
-    * Nimm ein Jumper-Kabel.
-    * Finde den Pin **GPIO 14** am Raspberry Pi (das ist der physische Pin 8, siehe Diagramm). 
-    * Verbinde **GPIO 14** mit dem Messpunkt, nämlich der Reihe, die **LDR** und **10 kOhm Widerstand** verbindet (Reihe **20**).
+2.  **Kondensator platzieren (Entlade-Teil):**
+    * Stecke das **kurze** Bein des **$0.47 \text{ µF}$ Kondensators** in Reihe 17.
+    * Stecke das **lange** Bein in Reihe 20.
+    * Der Kondensator ist jetzt parallel zum LDR platziert.
+3.  **Widerstand platzieren (Lade-Teil):**
+    * Stecke den **$47 \text{ kOhm}$ Widerstand** mit dem einen Bein in **3.3V** (die **rote Schiene**).
+    * Stecke das andere Bein in die Reihe 20.
+4.  **Daten-Pin (Messung):**
+    * Verbinde **GPIO 14** (Pin 8) mit der **gemeinsamen Reihe** (Reihe 20).
 
-
+![Breadboard layout](Bilder/Tag_09_LDR_Steckplatine.png)
 
 ### 💻 Schritte (Code-Ausführung)
 
@@ -65,7 +63,7 @@ Der LDR reagiert superschnell! Was kannst du damit anstellen?
 
 * **Challenge 1: Taschenlampen-Test**
     * Leuchte mit einer Taschenlampe direkt auf den LDR.
-    * **Frage:** Wie tief sinkt der Wert? (Vielleicht unter 100?)
+    * **Frage:** Wie tief sinkt der Wert? 
     * Halte einen Finger über den LDR. Wie hoch steigt der Wert im Dunkeln?
 * **Challenge 2: Die Nacht-LED**
     * **Herausforderung:** Kombiniere den Code von heute mit dem Code der **LED (GPIO 17)** von Tag 4.
