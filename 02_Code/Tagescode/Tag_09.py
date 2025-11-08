@@ -13,16 +13,15 @@ def measure_light():
     # Zähler auf Null setzen
     count = 0
     
-    # 1. Kondensator entladen (auf LOW setzen)
+    # 1. Kondensator entladen (auf HIGH setzen)
     GPIO.setup(LDR_PIN, GPIO.OUT) 
     GPIO.output(LDR_PIN, GPIO.HIGH)
-    time.sleep(0.1) # Kurz warten, um sicherzustellen, dass er leer ist
+    time.sleep(0.1) # Kurz warten, um sicherzustellen, dass er voll ist
     
-    # 2. Pin auf INPUT umstellen und die Ladezeit messen
-    # Die 3.3V laden den Kondensator über den LDR/Widerstand auf
+    # 2. Pin auf INPUT umstellen und die Entladezeit messen
     GPIO.setup(LDR_PIN, GPIO.IN)
     
-    # Zähle, wie lange es dauert, bis der Pin HIGH wird (geladen ist)
+    # Zähle, wie lange es dauert, bis der Pin LOW wird (entladen ist)
     while GPIO.input(LDR_PIN) == GPIO.HIGH:
         count += 1
         
