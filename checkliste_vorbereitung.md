@@ -31,6 +31,16 @@ Diese Schritte müssen einmalig durchgeführt werden, um den Raspberry Pi vorzub
 | **5. Hardware verpacken** | Alle 23 weiteren Hardware-Komponenten (gemäß `00_Teileliste.md`) in die vorbereiteten Schachteln (`04_Verpackung_Printables/`) verpacken. | [ ] |
 
 
+```
+gh auth login
+gh auth setup-git
+git config --global user.email "you@example.com"
+git config --global user.name "your name"
+python -m venv $HOME/.pyenv
+sed -i -e '/^\[LocalCPython\]/,/^\s*\[/ { /^\s*executable =/d }' -e "/^\[LocalCPython\]/a executable = $HOME/.pyenv/bin/python3" ~/.config/Thonny/configuration.ini
+source .pyenv/bin/activate
+pip install adafruit-circuitpython-bme280 RPi.GPIO
+```
 
 
 ---

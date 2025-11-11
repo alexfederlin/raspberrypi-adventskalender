@@ -59,7 +59,7 @@ Bevor wir den Sensor testen können, muss der Pi wissen, dass er den I²C-Bus be
 2.  Navigiere im blauen Menü zu **3 Interface Options** (Schnittstellen-Optionen).
 3.  Wähle **I2C**.
 4.  Wähle **Yes** (Ja), um die I2C-Schnittstelle zu aktivieren.
-5.  Wähle **Finish** und starte den Pi **neu**, wenn er dich dazu auffordert (`sudo reboot`).
+5.  Wähle **Finish** und starte den Pi **neu** (`sudo reboot`).
 
 #### Teil B: I²C-Tools installieren und testen
 
@@ -84,7 +84,3 @@ Nach dem Neustart:
 
 * **Frage:** Was siehst du im Terminal, wenn du das **SDA**-Kabel vom Pi abziehst und den Test (`i2cdetect -y 1`) wiederholst? (Die Adresse sollte verschwinden oder der Befehl fehlschlagen, da die Datenleitung fehlt!)
 * **Herausforderung:** Versuche, die LED (GPIO 17) mit dem Taster (GPIO 18) zu steuern, während der BME280 angeschlossen ist. Funktioniert das noch? (Es sollte, da sie unterschiedliche Pins verwenden!)
-
----
-
-**Morgen (Tag 8):** Wir installieren die spezielle Python-Bibliothek und lesen die ersten echten Werte (Temperatur, Feuchtigkeit und Druck) aus!
