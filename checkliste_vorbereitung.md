@@ -40,6 +40,13 @@ python -m venv $HOME/.pyenv
 sed -i -e '/^\[LocalCPython\]/,/^\s*\[/ { /^\s*executable =/d }' -e "/^\[LocalCPython\]/a executable = $HOME/.pyenv/bin/python3" ~/.config/Thonny/configuration.ini
 source .pyenv/bin/activate
 pip install adafruit-circuitpython-bme280 RPi.GPIO
+ssh-keygen -t ed25519 -C "adventspi"
+cat ~/.ssh/id_ed25519.pub
+```
+add content of public key to your github account
+
+``` 
+ssh -T git@github.com
 ```
 
 
