@@ -31,9 +31,8 @@ Diese Schritte müssen einmalig durchgeführt werden, um den Raspberry Pi vorzub
 | **5. Hardware verpacken** | Alle 23 weiteren Hardware-Komponenten (gemäß `00_Teileliste.md`) in die vorbereiteten Schachteln (`04_Verpackung_Printables/`) verpacken. | [ ] |
 
 
+Wir benutzen SSH Keys für die Github authentifizierung, da diese am zuverlässigsten sind.
 ```
-gh auth login
-gh auth setup-git
 git config --global user.email "you@example.com"
 git config --global user.name "your name"
 python -m venv $HOME/.pyenv
@@ -43,12 +42,12 @@ pip install adafruit-circuitpython-bme280 RPi.GPIO
 ssh-keygen -t ed25519 -C "adventspi"
 cat ~/.ssh/id_ed25519.pub
 ```
-add content of public key to your github account
+Inhalt des Public Keys auf github.com deinem Account hinzufügen
 
 ``` 
 ssh -T git@github.com
 ```
-
+Jetzt kann der beschenkte das Repo mit `git clone git@github.com:USERNAME/REPOSITORY-NAME.git` clonen.
 
 ---
 

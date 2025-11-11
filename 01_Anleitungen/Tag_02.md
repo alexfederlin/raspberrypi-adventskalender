@@ -25,10 +25,10 @@ Mit Git können wir unseren Code speichern und verwalten. Wir werden heute das "
     cd Desktop
     ```
 3.  **Das Projekt klonen:**
-    * Jetzt kommt der Magie-Befehl! Benutze `gh repo clone` und den Link von deiner Notiz.
+    * Jetzt kommt der Magie-Befehl! Benutze `git clone` und den Link von deiner Notiz.
     * **WICHTIG:** Ersetze `[HIER_DEIN_LINK_EINFUEGEN]` mit dem echten Link von deinem Zettel!
     ```bash
-    gh repo clone [HIER_DEIN_LINK_EINFUEGEN]
+    git clone [HIER_DEIN_LINK_EINFUEGEN]
     ```
     * Drücke `Enter`.
 4.  **Erfolg prüfen:**

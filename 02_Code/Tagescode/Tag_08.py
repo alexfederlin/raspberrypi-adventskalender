@@ -2,8 +2,8 @@ import board
 import time
 from adafruit_bme280 import basic as adafruit_bme280
 
-# Create sensor object, using the board's default I2C bus.
-i2c = board.I2C()   # uses board.SCL and board.SDA
+# Erstelle das Sensor-Objekt auf dem standard I2C-Bus
+i2c = board.I2C()   # benutzt board.SCL und board.SDA
 bme280 = adafruit_bme280.Adafruit_BME280_I2C(i2c, address=0x76)
 
 print("Starte Messung... Drücke STRG+C zum Stoppen.")
