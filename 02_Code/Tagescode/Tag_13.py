@@ -37,7 +37,8 @@ display.root_group = splash
 
 # Draw a label
 text = "Hello World!"
-text_area = label.Label(terminalio.FONT, text=text, color=0xFFFFFF, x=28, y=HEIGHT // 2 - 1)
+#text_area = label.Label(terminalio.FONT, text=text, color=0xFFFFFF, x=28, y=HEIGHT // 2 - 1)
+text_area = label.Label(terminalio.FONT, text=text, color=0xFFFFFF, x=28, y=15)
 splash.append(text_area)
 
 print("Schau auf dein OLED-Display! Es sollte 'Hallo Welt!' anzeigen.")

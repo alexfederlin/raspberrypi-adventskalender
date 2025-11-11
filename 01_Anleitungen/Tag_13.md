@@ -45,15 +45,8 @@ Die Schaltung von gestern (BME280, Taster, LDR etc.) bleibt einfach so, wie sie 
 
 ### 💻 Schritte (Software)
 
-#### Teil A: Übersetzer installieren und Testen
+#### Teil A: Testen
 
-Genau wie der BME280 braucht auch das Display einen "Übersetzer" (Bibliothek), damit Python mit ihm sprechen kann.
-
-1.  **Pi starten** und das **Terminal** öffnen.
-2.  Installiere die Display-Bibliothek:
-    ```bash
-    sudo pip3 install adafruit-circuitpython-ssd1306
-    ```
 3.  **Der ultimative Test:** Wir prüfen, ob der Pi jetzt **BEIDE** Geräte sieht. Gib wieder ein:
     ```bash
     i2cdetect -y 1
@@ -82,5 +75,5 @@ Auf deinem kleinen, schwarzen Bildschirm sollte jetzt hell "Hallo Welt!" leuchte
 * **Challenge 2: Position ändern**
     * Was passiert, wenn du `x=28` und `y=30` änderst?
     * **Versuche:** Setze `x=0` und `y=0`. Wo ist der Text jetzt? (Der 0/0-Punkt ist oben links!)
-* **Challenge 3 (Experte): Länger leuchten**
-    * Kannst du das Programm so ändern, dass der Text **blinkt**? (Tipp: Du brauchst eine `while True`-Schleife (wie an Tag 5) und Befehle wie `display.show(text_area)` und `display.fill(0)`, `display.show()` im Wechsel.)
+* **Challenge 3 (Experte): Blinken**
+    * Kannst du das Programm so ändern, dass der Text **blinkt**? (Tipp: Du brauchst eine `while True`-Schleife (wie an Tag 5) und Befehle wie `display.root_group = None` und `display.root_group = splash` im Wechsel.)
