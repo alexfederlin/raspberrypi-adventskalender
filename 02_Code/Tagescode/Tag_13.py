@@ -1,39 +1,49 @@
 import board
-import busio
-import adafruit_ssd1306
-import terminalio
-from adafruit_display_text import label
+import displayio
 import time
 
-# Gibt alle alten Displays frei, falls das Skript mal abgestürzt ist
-# displayio.release_displays() 
-# (Oben auskommentiert, brauchen wir meist nicht, aber gut zu wissen)
+# from fourwire import FourWire
+import terminalio
+from adafruit_display_text import label
+from i2cdisplaybus import I2CDisplayBus
 
-# --- I2C Bus Setup (wie bei Tag 8) ---
-i2c = busio.I2C(board.SCL, board.SDA)
+import adafruit_displayio_ssd1306
 
-# --- Display Setup (Adresse 0x3c ist üblich) ---
-# Wir sagen ihm explizit, dass er das Display (0x3c) nehmen soll
-display = adafruit_ssd1306.SSD1306_I2C(128, 64, i2c, address=0x3c)
+displayio.release_displays()
 
-# Display löschen (alles schwarz machen)
-display.fill(0)
-display.show()
+oled_reset = board.D9
 
-# --- Text erstellen ---
-text = "Hallo Welt!"
-# Wir benutzen eine eingebaute Schriftart (terminalio.FONT)
-text_area = label.Label(terminalio.FONT, text=text, color=0xFFFFFF, x=28, y=30)
+# Use for I2C
+i2c = board.I2C()  # uses board.SCL and board.SDA
+# i2c = board.STEMMA_I2C()  # For using the built-in STEMMA QT connector on a microcontroller
+display_bus = I2CDisplayBus(i2c, device_address=0x3C, reset=oled_reset)
 
-# --- Text anzeigen ---
-display.show(text_area)
+# Use for SPI
+# spi = board.SPI()
+# oled_cs = board.D5
+# oled_dc = board.D6
+# display_bus = FourWire(spi, command=oled_dc, chip_select=oled_cs,
+#                                 reset=oled_reset, baudrate=1000000)
+
+WIDTH = 128
+HEIGHT = 32  # Change to 64 if needed
+BORDER = 4
+
+display = adafruit_displayio_ssd1306.SSD1306(display_bus, width=WIDTH, height=HEIGHT)
+
+# Make the display context
+splash = displayio.Group()
+display.root_group = splash
+
+# Draw a label
+text = "Hello World!"
+text_area = label.Label(terminalio.FONT, text=text, color=0xFFFFFF, x=28, y=HEIGHT // 2 - 1)
+splash.append(text_area)
 
 print("Schau auf dein OLED-Display! Es sollte 'Hallo Welt!' anzeigen.")
 
 # Wir lassen es 10 Sekunden an, bevor das Programm endet
 time.sleep(10)
+display.root_group = None
 
-# Display am Ende wieder löschen
-display.fill(0)
-display.show()
 print("Programm beendet.")
