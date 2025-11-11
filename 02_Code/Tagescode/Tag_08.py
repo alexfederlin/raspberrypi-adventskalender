@@ -1,15 +1,10 @@
 import board
-import busio
-import adafruit_bme280
 import time
+from adafruit_bme280 import basic as adafruit_bme280
 
-# 1. I2C Bus initialisieren (SDA=GPIO 2, SCL=GPIO 3)
-i2c = busio.I2C(board.SCL, board.SDA)
-
-# 2. Sensor initialisieren
-# HINWEIS: Prüfe, ob deine Adresse 0x76 oder 0x77 ist!
-# Wenn der Code fehlschlägt, versuche: bme280 = adafruit_bme280.Adafruit_BME280_I2C(i2c, address=0x77)
-bme280 = adafruit_bme280.Adafruit_BME280_I2C(i2c, address=0x76) 
+# Create sensor object, using the board's default I2C bus.
+i2c = board.I2C()   # uses board.SCL and board.SDA
+bme280 = adafruit_bme280.Adafruit_BME280_I2C(i2c, address=0x76)
 
 print("Starte Messung... Drücke STRG+C zum Stoppen.")
 
