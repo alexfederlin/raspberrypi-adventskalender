@@ -49,27 +49,27 @@ Die täglichen Aufgaben sind so konzipiert, dass sie **jeweils ca. 20–30 Minut
 
 | Tag | Phase | Thema/Ziel | Inhalt des Türchens (Hardware/Code) | Lernschwerpunkt |
 | :--- | :--- | :--- | :--- | :--- |
-| **1** | **I** | **Start & Pi-Vorbereitung** 🚀 | Micro-SD-Karte (mit vorinstalliertem OS) | System-Setup, WLAN-Verbindung |
+| **1** | **I** | **Start & Pi-Vorbereitung** 🚀 | **HW:** Micro-SD-Karte (mit vorinstalliertem OS) | System-Setup, WLAN-Verbindung |
 | **2** | **I** | **Erster Programmcode** 💻 | Git Repo mit Code-Vorlagen clonen | Python-Grundlagen, Code ausführen |
-| **3** | **I** | **Breadboard-Grundlagen** 📌 | Breadboard und 5 Jumper-Kabel (M/F) | GPIO-Pins, Schaltkreis-Grundlagen |
-| **4** | **I** | **Erste LED schalten** 🔴 | Rote LED und 220 Ohm Widerstand | Digitaler Ausgang, Stromkreis schließen |
+| **3** | **I** | **Breadboard-Grundlagen** 📌 | **HW:** Breadboard und 5 Jumper-Kabel (M/F) | GPIO-Pins, Schaltkreis-Grundlagen |
+| **4** | **I** | **Erste LED schalten** 🔴 | **HW:** Rote LED und 220 Ohm Widerstand | Digitaler Ausgang, Stromkreis schließen |
 | **5** | **I** | **LED blinken lassen** ✨ | Anleitung zum Code-Update (`time.sleep()`) | Programmablaufsteuerung, Timing |
-| **6** | **I** | **Taster-Input** 👆 | Taster und 10 kOhm Widerstand | Digitaler Eingang, Interrupts |
+| **6** | **I** | **Taster-Input** 👆 | **HW:** Taster und 10 kOhm Widerstand | Digitaler Eingang, Interrupts |
 | --- | --- | --- | --- | --- |
-| **7** | **II** | **Temperatursensor I** 🌡️ | Temperatur-/Feuchtesensor **DHT11/BME280** und Kabel | Datenblatt lesen, serielle Kommunikation |
+| **7** | **II** | **Temperatursensor I** 🌡️ | **HW:** Temperatur-/Feuchtesensor **DHT11/BME280** und Kabel | Datenblatt lesen, serielle Kommunikation |
 | **8** | **II** | **Sensor-Code integrieren** | Code-Snippets zum Auslesen des Sensors | Externe Bibliotheken verwenden |
-| **9** | **II** | **Umgebungslicht-Sensor** 💡 | Fotowiderstand (LDR) + 10 kOhm Widerstand | Analoge Werte digital messen (Spannungsteiler) |
+| **9** | **II** | **Umgebungslicht-Sensor** 💡 | **HW:** Fotowiderstand (LDR) + 47 kOhm Widerstand + 0.47 µF Kondensator | Analoge Werte digital messen (Spannungsteiler) |
 | **10** | **II** | **Anzeigemodi umschalten** 🔩 | Taster bestimmt welcher Sensorwert angezeigt wird | Funktionen steuern |
-| **11** | **II** | **Ein Summer für Alarme** 📢 | Aktiver Piezosummer und Jumper-Kabel | Akustischer Ausgang, Feedback-Systeme |
+| **11** | **II** | **Ein Summer für Alarme** 📢 | **HW:** Aktiver Piezosummer und Jumper-Kabel | Akustischer Ausgang, Feedback-Systeme |
 | **12** | **II** | **Dashboard** | Code-Update: Alle Sensorwerte abfragen und zwischen Anzeigen umschalten | Kombination aller Sensoren |
 | --- | --- | --- | --- | --- |
-| **13** | **III** | **Display anschließen** 📺 | Kleines **OLED/LCD Display** (128x64, I2C) anschlißen und "Hello World"| Neue Hardware-Schnittstelle I2C |
+| **13** | **III** | **Display anschließen** 📺 | **HW:** Kleines **OLED/LCD Display** (128x64, I2C) anschlißen und "Hello World"| Neue Hardware-Schnittstelle I2C |
 | **14** | **III** | **Display-Code I (Werte)** | Code-Update: Sensorwerte auf dem Display anzeigen | Variablen-Management, Datenformatierung |
 | **15** | **III** | **Display-Code II (Dashboard)** | Code-Update: Sensorwerte auf dem Display anzeigen und umschalten |  |
 | **16** | **III** | **Alarm System** |  |
-| **16** | **IV** | **Internet-Daten I (Uhrzeit)** 🌐 | Anleitung zur **API-Bibliothek** (`requests`) | Netzwerkprogrammierung, HTTP-Anfragen |
+| **17** | **IV** | **Internet-Daten I (Uhrzeit)** 🌐 | Anleitung zur **API-Bibliothek** (`requests`) | Netzwerkprogrammierung, HTTP-Anfragen |
 | **18** | **IV** | **Internet-Daten II (Wetter)** 🌤️ | Open-Meteo  | JSON-Daten parsen, externe Daten nutzen |
-| **17** | **III** | **Gehäuse-Teil I** 📦 | Der **3D-gedruckte Boden** des Gehäuses | Funktionale Gehäuse-Elemente |
+| **19** | **III** | **Gehäuse-Teil I** 📦 | Der **3D-gedruckte Boden** des Gehäuses | Funktionale Gehäuse-Elemente |
 | **18** | **III** | **Gehäuse-Teil II** 🖼️ | Die **3D-gedruckte Display-Fassung/Frontplatte** | Modulares Bauen, Hardware-Integration |
 | --- | --- | --- | --- | --- |
 | **19** | **IV** | **3D-Druck Projekt-Tag** 🌈 | **Neue Rolle Filament** (z.B. Leucht-PLA) | Design-Ideen, Slicing-Software (optional) |
