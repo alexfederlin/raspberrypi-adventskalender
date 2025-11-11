@@ -63,7 +63,7 @@ Die täglichen Aufgaben sind so konzipiert, dass sie **jeweils ca. 20–30 Minut
 | **11** | **II** | **Ein Summer für Alarme** 📢 | **HW:** Aktiver Piezosummer und Jumper-Kabel | Akustischer Ausgang, Feedback-Systeme |
 | **12** | **II** | **Dashboard** | Code-Update: Alle Sensorwerte abfragen und zwischen Anzeigen umschalten | Kombination aller Sensoren |
 | --- | --- | --- | --- | --- |
-| **13** | **III** | **Display anschließen** 📺 | **HW:** Kleines **OLED/LCD Display** (128x64, I2C) anschlißen und "Hello World"| Neue Hardware-Schnittstelle I2C |
+| **13** | **III** | **Display anschließen** 📺 | **HW:** Kleines **OLED/LCD Display** (128x64, I2C) anschließen und "Hello World"| |
 | **14** | **III** | **Display-Code I (Werte)** | Code-Update: Sensorwerte auf dem Display anzeigen | Variablen-Management, Datenformatierung |
 | **15** | **III** | **Display-Code II (Dashboard)** | Code-Update: Sensorwerte auf dem Display anzeigen und umschalten |  |
 | **16** | **III** | **Alarm System** |  |

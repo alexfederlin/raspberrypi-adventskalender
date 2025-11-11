@@ -38,7 +38,7 @@ git config --global user.name "your name"
 python -m venv $HOME/.pyenv
 sed -i -e '/^\[LocalCPython\]/,/^\s*\[/ { /^\s*executable =/d }' -e "/^\[LocalCPython\]/a executable = $HOME/.pyenv/bin/python3" ~/.config/Thonny/configuration.ini
 source .pyenv/bin/activate
-pip install adafruit-circuitpython-bme280 RPi.GPIO
+pip install adafruit-circuitpython-bme280 RPi.GPIO adafruit-circuitpython-ssd1306 adafruit-circuitpython-displayio-ssd1306 adafruit-circuitpython-display-text
 ssh-keygen -t ed25519 -C "adventspi"
 cat ~/.ssh/id_ed25519.pub
 ```
