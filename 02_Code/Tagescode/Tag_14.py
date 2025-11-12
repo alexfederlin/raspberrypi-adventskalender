@@ -52,7 +52,7 @@ temp_label = label.Label(terminalio.FONT, text="Temp:", color=0xFFFFFF, x=5, y=5
 
 # Zeile 2: Luftfeuchtigkeit (Unten)
 # y=5 + 13 Pixel Höhe + etwas Abstand = ca. 20
-humidity_label = label.Label(terminalio.FONT, text="Feucht:", color=0xFFFFFF, x=5, y=20)
+humidity_label = label.Label(terminalio.FONT, text="Feucht:", color=0xFFFFFF, x=5, y=19)
 
 # Füge beide Labels der Display-Gruppe hinzu
 splash.append(temp_label)
@@ -63,6 +63,7 @@ print("Starte kontinuierliche Messung und Anzeige. Drücke STRG+C zum Stoppen.")
 # --- 3. Hauptschleife zur Aktualisierung ---
 try:
     while True:
+
         if bme280 is not None:
             # Werte auslesen
             temperatur = bme280.temperature
@@ -80,13 +81,19 @@ try:
             text_area.text = "BME280 FEHLER"
             print("Warte auf BME280-Sensor...")
 
+        display.root_group = None
+
+        display.root_group = splash
+
         # Warte 2 Sekunden vor der nächsten Aktualisierung
         time.sleep(2.0)
 
 except KeyboardInterrupt:
     print("\nProgramm beendet. Räume auf.")
-finally:
-    # Lösche das Display, bevor das Programm endet
-    display.root_group = None
-    time.sleep(1) 
-    print("Display gelöscht.")
+
+# Lösche das Display, bevor das Programm endet
+display.root_group = None
+#time.sleep(1) 
+print("Display gelöscht.")
+    
+    
