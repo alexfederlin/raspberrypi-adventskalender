@@ -23,7 +23,7 @@ i2c = board.I2C()  # uses board.SCL and board.SDA
 # --- 1. BME280 Sensor initialisieren (NEU) ---
 try:
     # Sensor am I²C-Bus finden
-    bme280 = adafruit_bme280.Adafruit_BME280_I2C(i2c)
+    bme280 = adafruit_bme280.Adafruit_BME280_I2C(i2c, address=0x76)
     # Optional: Einstellungen anpassen
     bme280.sea_level_pressure = 1013.25 # Beispiel für Meereshöhe
     print("BME280 Sensor initialisiert.")
