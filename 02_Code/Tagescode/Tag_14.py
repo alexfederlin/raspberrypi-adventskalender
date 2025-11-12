@@ -1,49 +1,89 @@
 import board
-import busio
-import adafruit_ssd1306
+import displayio
+import time
+# WICHTIG: Die Bibliotheken für den BME280 müssen importiert werden
+import busio 
 import adafruit_bme280
+
 import terminalio
 from adafruit_display_text import label
-import time
+from i2cdisplaybus import I2CDisplayBus
 
-# --- I2C Bus Setup (wie bei Tag 8 & 13) ---
-i2c = busio.I2C(board.SCL, board.SDA)
+import adafruit_displayio_ssd1306
 
-# --- BEIDE GERÄTE initialisieren ---
-# WICHTIG: Prüfe deine Adressen mit 'i2cdetect -y 1'
-bme280 = adafruit_bme280.Adafruit_BME280_I2C(i2c, address=0x76)
-display = adafruit_ssd1306.SSD1306_I2C(128, 64, i2c, address=0x3c)
+# --- Initialisierung ---
 
-# Display löschen (alles schwarz machen)
-display.fill(0)
-display.show()
+displayio.release_displays()
 
-# --- Text-Label erstellen ---
-# Wir erstellen ein leeres Textfeld oben links (x=0, y=5)
-text_area = label.Label(terminalio.FONT, text="", color=0xFFFFFF, x=0, y=5)
-# Und zeigen es auf dem Display an
-display.show(text_area)
+# Pin-Definitionen
+oled_reset = board.D9
+# I²C-Bus initialisieren (wird für Display und BME280 genutzt)
+i2c = board.I2C()  # uses board.SCL and board.SDA
 
-print("Starte Live-Temperatur-Anzeige auf dem OLED! STRG+C zum Stoppen.")
-
+# --- 1. BME280 Sensor initialisieren (NEU) ---
 try:
-    # --- Endlos-Schleife für Live-Daten ---
+    # Sensor am I²C-Bus finden
+    bme280 = adafruit_bme280.Adafruit_BME280_I2C(i2c)
+    # Optional: Einstellungen anpassen
+    bme280.sea_level_pressure = 1013.25 # Beispiel für Meereshöhe
+    print("BME280 Sensor initialisiert.")
+except ValueError:
+    print("FEHLER: BME280 Sensor nicht gefunden (prüfe Adressierung/Verkabelung).")
+    # Stelle sicher, dass das Programm trotzdem weiterläuft, falls der Sensor fehlt
+    bme280 = None 
+
+
+# --- 2. OLED Display initialisieren (Wie Tag 13) ---
+
+display_bus = I2CDisplayBus(i2c, device_address=0x3C, reset=oled_reset)
+
+WIDTH = 128
+HEIGHT = 32 
+
+display = adafruit_displayio_ssd1306.SSD1306(display_bus, width=WIDTH, height=HEIGHT)
+
+# Erstelle die Display-Gruppe
+splash = displayio.Group()
+display.root_group = splash
+
+# Definiere das Label Objekt
+# Wir lassen den Text zunächst leer und zentrieren das Label
+text_area = label.Label(terminalio.FONT, text="", color=0xFFFFFF, x=0, y=15)
+
+# Füge das Label der Display-Gruppe hinzu
+splash.append(text_area)
+
+print("Starte kontinuierliche Messung und Anzeige. Drücke STRG+C zum Stoppen.")
+
+# --- 3. Hauptschleife zur Aktualisierung ---
+try:
     while True:
-        # 1. Sensor auslesen
-        temp_C = bme280.temperature
-        
-        # 2. Zahl in Text umwandeln (mit f-String)
-        # Wir runden auf eine Nachkommastelle (.1f)
-        text_fuer_display = f"Temperatur: {temp_C:.1f} C"
-        
-        # 3. Den Text im Label aktualisieren
-        text_area.text = text_fuer_display
-        
-        # Kurze Pause
-        time.sleep(1) # Aktualisiert jede Sekunde
+        if bme280 is not None:
+            # Temperaturwert auslesen
+            temperatur = bme280.temperature
+            luftfeuchte = bme280.relative_humidity
+            
+            # Text formatieren
+            anzeige_text = f"Temp: {temperatur:.1f} °C\nFeucht: {luftfeuchte:.1f} %"
+            
+            # Label auf dem Display aktualisieren
+            text_area.text = anzeige_text
+            
+            # Ausgabe auf der Konsole zur Kontrolle
+            print(f"Aktualisiert: {anzeige_text.replace('\n', ' | ')}")
+            
+        else:
+            # Fehlermeldung anzeigen, falls Sensor fehlt
+            text_area.text = "BME280 FEHLER"
+            print("Warte auf BME280-Sensor...")
+
+        # Warte 2 Sekunden vor der nächsten Aktualisierung
+        time.sleep(2.0)
 
 except KeyboardInterrupt:
-    # Am Ende wieder alles löschen
-    display.fill(0)
-    display.show()
-    print("\nAnzeige beendet.")
+    print("\nProgramm beendet. Räume auf.")
+finally:
+    # Lösche das Display, bevor das Programm endet
+    display.root_group = None
+    time.sleep(1) 
+    print("Display gelöscht.")
