@@ -46,12 +46,17 @@ display = adafruit_displayio_ssd1306.SSD1306(display_bus, width=WIDTH, height=HE
 splash = displayio.Group()
 display.root_group = splash
 
-# Definiere das Label Objekt
-# Wir lassen den Text zunächst leer und zentrieren das Label
-text_area = label.Label(terminalio.FONT, text="", color=0xFFFFFF, x=0, y=15)
+# Die Schriftgröße des terminalio.FONT ist ca. 13 Pixel hoch.
+# Zeile 1: Temperatur (Oben)
+temp_label = label.Label(terminalio.FONT, text="Temp:", color=0xFFFFFF, x=5, y=5)
 
-# Füge das Label der Display-Gruppe hinzu
-splash.append(text_area)
+# Zeile 2: Luftfeuchtigkeit (Unten)
+# y=5 + 13 Pixel Höhe + etwas Abstand = ca. 20
+humidity_label = label.Label(terminalio.FONT, text="Feucht:", color=0xFFFFFF, x=5, y=20)
+
+# Füge beide Labels der Display-Gruppe hinzu
+splash.append(temp_label)
+splash.append(humidity_label)
 
 print("Starte kontinuierliche Messung und Anzeige. Drücke STRG+C zum Stoppen.")
 
@@ -59,18 +64,16 @@ print("Starte kontinuierliche Messung und Anzeige. Drücke STRG+C zum Stoppen.")
 try:
     while True:
         if bme280 is not None:
-            # Temperaturwert auslesen
+            # Werte auslesen
             temperatur = bme280.temperature
             luftfeuchte = bme280.relative_humidity
             
-            # Text formatieren
-            anzeige_text = f"Temp: {temperatur:.1f} °C\nFeucht: {luftfeuchte:.1f} %"
-            
-            # Label auf dem Display aktualisieren
-            text_area.text = anzeige_text
+            # Label-Texte separat aktualisieren
+            temp_label.text = f"Temp: {temperatur:.1f} °C"
+            humidity_label.text = f"Feucht: {luftfeuchte:.1f} %"
             
             # Ausgabe auf der Konsole zur Kontrolle
-            print(f"Aktualisiert: {anzeige_text.replace('\n', ' | ')}")
+            print(f"Aktualisiert: {temp_label.text} | {humidity_label.text}")
             
         else:
             # Fehlermeldung anzeigen, falls Sensor fehlt
