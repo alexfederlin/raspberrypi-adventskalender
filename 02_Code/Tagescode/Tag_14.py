@@ -69,10 +69,14 @@ try:
             temperatur = bme280.temperature
             luftfeuchte = bme280.relative_humidity
             
+            display.root_group = None
+
             # Label-Texte separat aktualisieren
             temp_label.text = f"Temp: {temperatur:.1f} °C"
             humidity_label.text = f"Feucht: {luftfeuchte:.1f} %"
             
+            display.root_group = splash
+
             # Ausgabe auf der Konsole zur Kontrolle
             print(f"Aktualisiert: {temp_label.text} | {humidity_label.text}")
             
@@ -81,9 +85,7 @@ try:
             text_area.text = "BME280 FEHLER"
             print("Warte auf BME280-Sensor...")
 
-        display.root_group = None
 
-        display.root_group = splash
 
         # Warte 2 Sekunden vor der nächsten Aktualisierung
         time.sleep(2.0)
