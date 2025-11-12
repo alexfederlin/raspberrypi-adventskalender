@@ -2,8 +2,8 @@ import board
 import displayio
 import time
 # WICHTIG: Die Bibliotheken für den BME280 müssen importiert werden
-import busio 
-import adafruit_bme280
+from adafruit_bme280 import basic as adafruit_bme280
+
 
 import terminalio
 from adafruit_display_text import label
